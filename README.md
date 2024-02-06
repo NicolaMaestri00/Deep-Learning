@@ -58,5 +58,19 @@ We employ the Lavis library to extract from each image a set of heat maps based 
 In our project, my team and I focused on enhancing object localization within images by utilizing the image-text alignment capabilities of Clip.
 The network is subdivided into a Locator, which computes a low‑level probability map, and a Refiner, which upsamples this map to return a bounding box. 
 Clip Vit 16 is used as frozen backbone for the Locator, with adapters to enhance cross-attention, whereas the Refiner consists of a series of convolutional layers. This drastically reduced the amount of training needed while achieving a considerable accuracy on RefCocog.
+
 ![5](https://github.com/NicolaMaestri00/Deep-Learning/assets/104208237/e4e1e6c1-bdcc-418a-a2b3-f76c1d01d0a9)
+
+### References
+1. Redmon, Joseph, Santosh Divvala, Ross Girshick, and Ali Farhadi. "You only look once: Unified, real-time object detection." In Proceedings of the IEEE conference on computer vision and pattern recognition, pp. 779-788. 2016.
+
+2. Radford, Alec, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry et al. "Learning transferable visual models from natural language supervision." In International conference on machine learning, pp. 8748-8763. PMLR, 2021.
+
+3. Li, Junnan, Dongxu Li, Caiming Xiong, and Steven Hoi. "Blip: Bootstrapping language-image pre-training for unified vision-language understanding and generation." In International Conference on Machine Learning, pp. 12888-12900. PMLR, 2022.
+
+4. Kirillov, Alexander, Eric Mintun, Nikhila Ravi, Hanzi Mao, Chloe Rolland, Laura Gustafson, Tete Xiao et al. "Segment anything." arXiv preprint arXiv:2304.02643 (2023).
+
+5. Kim, Seoyeon, Minguk Kang, and Jaesik Park. "RISCLIP: Referring Image Segmentation Framework using CLIP." arXiv preprint arXiv:2306.08498 (2023).
+
+6. Vaswani, Ashish, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, and Illia Polosukhin. "Attention is all you need." Advances in neural information processing systems 30 (2017).
 
