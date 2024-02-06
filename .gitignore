@@ -1,0 +1,6 @@
+*.pth
+__pycache__/
+wandb/
+.DS_Store
+refcocog/
+*.code-workspace

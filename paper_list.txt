@@ -1,0 +1,73 @@
+Robe da fare:
+- runnare la baseline con vit b 16 evaluation test set
+- runnnare baseline 2 (sam) con vit b16 evaluation on test set
+- runnare risclip sempre evaluation test set
+- rifare training refiner
+- verificare che dataset funzioni con baseline
+
+Risultati:
+- risultati evaluation di baseline e modello finale
+- training locator (scaled images on wandb)
+- training refiner (eventualmente rifarlo)
+
+
+Sezioni:
+- introduzione generale sulle soluzioni che abbiamo trovato (baseline + sam + finale)
+- dataset (Dataset.ipynb) + evaluation
+- baseline (baseline_dl.ipynb) + evaluation
+- sam (last_version.ipynb)
+- risclip:
+    - modello per locator (locator/adapters.py | /model.py | /clip.py | /simple_tokenizer.py)
+    - training loss (FocalDiceLoss.py)
+    - training locator (training_locator.py)
+    - modello per refiner (refiner/refiner.py)
+    - training refiner (training_refiner.py)
+    - evaluation
+- comparare risultati (evaulation)
+- conclusione
+
+
+
+
+
+
+TO KEEP TRACK OF FILES TO FIX/ADD/REMOVE/COMMENT
+
+We need to comment the code we did and specify maybe in the appendix what exactly in the files we did and commented.
+We need to remove all the files that we did not use.
+Also need to fix all the files and order them so that when run one after the other in the report they work, in theory
+also the code for training and evaluation should be able to run but we can disable it and just show a couple of results.
+
+COMM    FIXED   ADDED
+ENTED   FOR     IN
+        NOTEB   NOTEB
+[X]      [ ]     [ ]    model/locator/adapters.py
+[X]      [ ]     [ ]    model/locator/clip.py
+[X]      [ ]     [ ]    model/locator/model.py
+[X]      [ ]     [ ]    model/locator/simple_tokenizer.py
+[X]      [ ]     [ ]    dataset/RefcocogDataset.py
+[ ]      [ ]     [ ]    dataset/RefcocogDatasetMultiPhrase.py
+[X]      [ ]     [ ]    refiner/refiner.py
+[X]      [ ]     [ ]    notebooks/Baseline.ipynb
+[X]      [ ]     [ ]    notebooks/Baseline BLIP + SAM.ipynb
+[X]      [ ]     [ ]    FocalDiceLoss.py
+[X]      [ ]     [ ]    tester.py
+[X]      [ ]     [ ]    training_locator.py
+[X]      [ ]     [ ]    training_refiner.py
+
+
+ABOUT FILES:
+- clip.py:
+    nothing to comment, file should be as in standard implementation of clip
+- simple_tokenizer.py:
+    nothing to comment, file should be as in standard implementation of clip
+- model.py
+    stuff modified in the file:
+        - class CLIP:
+            - __init__()
+            - init_adapters()
+            - freeze_for_training()
+            - load_parameters()
+            - save_state_dict()
+            - encode()
+        - ResidualAttentionBlock class, used in Transformer class, used in VisionTransformer class, used in CLIP class
