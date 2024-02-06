@@ -27,6 +27,11 @@
 * Reinforcement Learning
 
 ## Assignment
+### Authors
+- Francesco Vaccari
+- Gabriele Stulzer
+- Nicola Maestri
+
 ### Abstract
 Visual Grounding is a challenging task which aims to locate an object in an image based on a natural language query. Despite impressive advances in computer vision and natural language processing, establishing meaningful connections between distinct elements of images and text to get a good comprehension of context is still a big research area. In our work, we explored some new strategies to solve the problem by laveraging the image-text alignment of Clip as a foundation model for new frameworks specialized in Visual Grounding.
 
