@@ -60,9 +60,10 @@ We employ the Lavis library to extract from each image a set of heat maps based 
 ![3](https://github.com/NicolaMaestri00/Deep-Learning/assets/104208237/a22cd2a5-c511-4a6b-8350-5067d8c59f68)
 
 ### Our implementation of RisClip
-In our project, my team and I focused on enhancing object localization within images by utilizing the image-text alignment capabilities of Clip.
-The network is subdivided into a Locator, which computes a low‑level probability map, and a Refiner, which upsamples this map to return a bounding box. 
-Clip Vit 16 is used as frozen backbone for the Locator, with adapters to enhance cross-attention, whereas the Refiner consists of a series of convolutional layers. This drastically reduced the amount of training needed while achieving a considerable accuracy on RefCocog.
+RisClip is a neural network subdivided into a Locator, which computes a low‑level probability map, and a Refiner, which upsamples this map to return a bounding box. 
+The main purpose is to exploit the image-text allignment already present in clip for the task of Visual Grounding.
+In particular, Clip Vit 16 is used as frozen backbone for the Locator, with adapters to enhance cross-attention, whereas the Refiner consists of a series of convolutional layers.
+This drastically reduced the amount of training needed while achieving a considerable accuracy on the RefCocog dataset.
 
 ![5](https://github.com/NicolaMaestri00/Deep-Learning/assets/104208237/e4e1e6c1-bdcc-418a-a2b3-f76c1d01d0a9)
 
