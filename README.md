@@ -37,3 +37,17 @@ First, we propose a baseline that combines the object detector Yolo [1] and CLIP
 - Visual Grounding
 - Referring Image Segmentation
 - Adapters and Fine-tuning
+
+### Baseline BLIP + SAM
+This baseline presents an alternative pipeline that removes the necessity for an object detector.
+We employ the Lavis library to extract from each image a set of heat maps based on the text instances. These are then used to identify some points with high confidence to belong to the target object. Finally, we utilize SAM, Segment Anything Model, to obtain a mask of the whole object and the corresponding bounding box to return as output.
+**Example**
+![1](https://github.com/NicolaMaestri00/Deep-Learning/assets/104208237/142634d3-4b99-4c1f-9f26-1ad7f78323a1)
+**Step 1: heatmap extraction based on the text query**
+![2](https://github.com/NicolaMaestri00/Deep-Learning/assets/104208237/68e7cd10-1532-4b37-b297-c348fcd776f5)
+**Step 2: Bounding Box extraction based on SAM**
+![3](https://github.com/NicolaMaestri00/Deep-Learning/assets/104208237/a22cd2a5-c511-4a6b-8350-5067d8c59f68)
+
+### Our implementation of RisClip
+<img width="338" alt="4" src="https://github.com/NicolaMaestri00/Deep-Learning/assets/104208237/0617c56f-8c6d-4f67-a3e3-0f7eb31095db">
+
