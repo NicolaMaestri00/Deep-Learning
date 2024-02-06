@@ -1,7 +1,5 @@
 # Machine-Learning
 
-## Introduction to Machine learning
-
 ## Classic Machine Learning Techniques
 
 ## Deep Learning
