@@ -41,6 +41,7 @@ First, we propose a baseline that combines the object detector Yolo [1] and CLIP
 ### Baseline BLIP + SAM
 This baseline presents an alternative pipeline that removes the necessity for an object detector.
 We employ the Lavis library to extract from each image a set of heat maps based on the text instances. These are then used to identify some points with high confidence to belong to the target object. Finally, we utilize SAM, Segment Anything Model, to obtain a mask of the whole object and the corresponding bounding box to return as output.
+
 **Example**
 ![1](https://github.com/NicolaMaestri00/Deep-Learning/assets/104208237/142634d3-4b99-4c1f-9f26-1ad7f78323a1)
 **Step 1: heatmap extraction based on the text query**
@@ -49,5 +50,8 @@ We employ the Lavis library to extract from each image a set of heat maps based 
 ![3](https://github.com/NicolaMaestri00/Deep-Learning/assets/104208237/a22cd2a5-c511-4a6b-8350-5067d8c59f68)
 
 ### Our implementation of RisClip
-<img width="338" alt="4" src="https://github.com/NicolaMaestri00/Deep-Learning/assets/104208237/0617c56f-8c6d-4f67-a3e3-0f7eb31095db">
+In our project, my team and I focused on enhancing object localization within images by utilizing the image-text alignment capabilities of Clip.
+The network is subdivided into a Locator, which computes a low‑level probability map, and a Refiner, which upsamples this map to return a bounding box. 
+Clip Vit 16 is used as frozen backbone for the Locator, with adapters to enhance cross-attention, whereas the Refiner consists of a series of convolutional layers. This drastically reduced the amount of training needed while achieving a considerable accuracy on RefCocog.
+![5](https://github.com/NicolaMaestri00/Deep-Learning/assets/104208237/e4e1e6c1-bdcc-418a-a2b3-f76c1d01d0a9)
 
