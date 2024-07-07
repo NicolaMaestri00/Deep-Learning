@@ -1,10 +1,10 @@
-# Machine-Learning
+# Deep Learning
 
 <!--
 ## Classic Machine Learning Techniques
 -->
 
-## Deep Learning
+## Syllabus
 * Supervised Learning
     -  Shallow Neural Networks
     -  Deep Neural Networks
