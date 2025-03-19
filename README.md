@@ -35,8 +35,9 @@ Our implementation of RisClip is a two-stage neural network composed of a Locato
 ![5](https://github.com/NicolaMaestri00/Deep-Learning/assets/104208237/e4e1e6c1-bdcc-418a-a2b3-f76c1d01d0a9)
 
 _References_
-2. ["Learning transferable visual models from natural language supervision"](https://arxiv.org/abs/2103.00020), Radford et al., 2021
-1. ["YOLO"](https://ieeexplore.ieee.org/document/7780460), Redmon et al., 2016
+
+1. ["Learning transferable visual models from natural language supervision"](https://arxiv.org/abs/2103.00020), Radford et al., 2021
+2. ["YOLO"](https://ieeexplore.ieee.org/document/7780460), Redmon et al., 2016
 3. ["BLIP"](https://arxiv.org/abs/2201.12086), Li et al., 2022
 4. ["SAM"](https://arxiv.org/abs/2304.02643), Kirillov et al., 2023
 5. ["RISCLIP"](https://arxiv.org/pdf/2306.08498v2), Kim et al., 2023
