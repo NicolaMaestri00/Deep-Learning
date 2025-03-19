@@ -34,6 +34,16 @@ Our implementation of RisClip is a two-stage neural network composed of a Locato
 
 ![5](https://github.com/NicolaMaestri00/Deep-Learning/assets/104208237/e4e1e6c1-bdcc-418a-a2b3-f76c1d01d0a9)
 
+_References_
+1. ["You only look once: Unified, real-time object detection."](https://ieeexplore.ieee.org/document/7780460), Redmon et al., 2016
+
+2. ["Learning transferable visual models from natural language supervision."](https://arxiv.org/abs/2103.00020), Radford et al., 2021
+
+3. ["Blip: Bootstrapping language-image pre-training for unified vision-language understanding and generation."](https://arxiv.org/abs/2201.12086), Li et al., 2022
+
+4. ["Segment anything."](https://arxiv.org/abs/2304.02643), Kirillov et al., 2023
+
+5. ["RISCLIP: Referring Image Segmentation Framework using CLIP."](https://arxiv.org/pdf/2306.08498v2), Kim et al., 2023
 
 ## Course Syllabus
 - Shallow/Deep Neural Networks
@@ -45,16 +55,5 @@ Our implementation of RisClip is a two-stage neural network composed of a Locato
 - Diffusion Models
 - Normalizing Flows
 
-
-_Project References_
-1. Redmon, Joseph, Santosh Divvala, Ross Girshick, and Ali Farhadi. ["You only look once: Unified, real-time object detection."](https://ieeexplore.ieee.org/document/7780460) In Proceedings of the IEEE conference on computer vision and pattern recognition, pp. 779-788. 2016.
-
-2. Radford, Alec, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry et al. "Learning transferable visual models from natural language supervision." In International conference on machine learning, pp. 8748-8763. PMLR, 2021.
-
-3. Li, Junnan, Dongxu Li, Caiming Xiong, and Steven Hoi. "Blip: Bootstrapping language-image pre-training for unified vision-language understanding and generation." In International Conference on Machine Learning, pp. 12888-12900. PMLR, 2022.
-
-4. Kirillov, Alexander, Eric Mintun, Nikhila Ravi, Hanzi Mao, Chloe Rolland, Laura Gustafson, Tete Xiao et al. "Segment anything." arXiv preprint arXiv:2304.02643 (2023).
-
-5. Kim, Seoyeon, Minguk Kang, and Jaesik Park. ["RISCLIP: Referring Image Segmentation Framework using CLIP."](https://arxiv.org/pdf/2306.08498v2) arXiv preprint arXiv:2306.08498 (2023).
-
-6. Vaswani, Ashish, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, and Illia Polosukhin. "Attention is all you need." Advances in neural information processing systems 30 (2017).
+_References_
+1. [Understanding Deep Learning](https://mitpress.mit.edu/9780262048644/understanding-deep-learning/), Simon J. D. Prince
