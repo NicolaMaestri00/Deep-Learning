@@ -4,6 +4,10 @@
 
 Visual Grounding aims to locate an object in an image based on a natural language query. Our work leverages CLIP's image-text alignment to build new frameworks for this task. We first introduce a baseline that combines YOLO with CLIP by selecting the candidate object with the highest cosine similarity to the query. Next, we propose a detector-free approach that uses heatmaps for target retrieval and SAM to generate accurate bounding boxes. Finally, we customize CLIP to produce a low-level probability map refined through upsampling convolutions. Fine-tuning CLIP enables strong performance with minimal training, offering a promising direction for Visual Grounding research.
 
+**Example**
+![1](https://github.com/NicolaMaestri00/Deep-Learning/assets/104208237/142634d3-4b99-4c1f-9f26-1ad7f78323a1)
+
+
 **Authors**: Nicola Maestri, Francesco Vaccari, Gabriele Stulzer
 
 ### Baseline Approach: *YOLO + CLIP*
@@ -15,17 +19,9 @@ Our baseline approach combines the YOLO object detector with CLIP to identify th
 ### Detector-Free Approach: *BLIP + SAM*
 
 This alternative pipeline removes the need for an object detector by leveraging the Lavis library to extract heat maps based on text instances. These heat maps highlight regions with high confidence of containing the target object, and the Segment Anything Model (SAM) is then used to generate a precise mask and corresponding bounding box.
-
-**Example**
-
-![1](https://github.com/NicolaMaestri00/Deep-Learning/assets/104208237/142634d3-4b99-4c1f-9f26-1ad7f78323a1)
-
-**Step 1: heatmap extraction based on the text query**
-
+- **Step 1: heatmap extraction based on the text query**
 ![2](https://github.com/NicolaMaestri00/Deep-Learning/assets/104208237/68e7cd10-1532-4b37-b297-c348fcd776f5)
-
-**Step 2: Bounding Box extraction based on SAM**
-
+- **Step 2: Bounding Box extraction based on SAM**
 ![3](https://github.com/NicolaMaestri00/Deep-Learning/assets/104208237/a22cd2a5-c511-4a6b-8350-5067d8c59f68)
 
 ### Customized CLIP Framework: *RisClip*
