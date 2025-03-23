@@ -1,6 +1,6 @@
 # Deep Learning
 
-## Final Assignent: *Transfer Learning for Visual Grounding*
+## Final Assignment: *Transfer Learning for Visual Grounding*
 
 Visual Grounding aims to locate an object in an image based on a natural language query. Our work leverages CLIP's image-text alignment to build new frameworks for this task. We first introduce a baseline that combines YOLO with CLIP by selecting the candidate object with the highest cosine similarity to the query. Next, we propose a detector-free approach that uses heatmaps for target retrieval and SAM to generate accurate bounding boxes. Finally, we customize CLIP to produce a low-level probability map refined through upsampling convolutions. Fine-tuning CLIP enables strong performance with minimal training, offering a promising direction for Visual Grounding research.
 
