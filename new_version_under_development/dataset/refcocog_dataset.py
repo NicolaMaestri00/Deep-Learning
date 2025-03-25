@@ -30,7 +30,7 @@ class RefcocogDataset(Dataset):
         self.annotations_df = references_df.merge(instances_df, left_on="ann_id", right_on="id").explode("sentences", ignore_index=True)
         self.annotations_df = self.annotations_df.filter(items=["image_id_x", "split", "sentences", "ann_id", "bbox", "area", "segmentation"])
 
-        if self.split != None:
+        if self.split is not None:
             self.annotations_df = self.annotations_df[self.annotations_df["split"] == self.split.lower()]
 
     def __get_data__(self):
@@ -39,18 +39,18 @@ class RefcocogDataset(Dataset):
 
     def __len__(self):
         return len(self.annotations_df)
-    
+
     def __get_image__(self, sample):
         image_id = sample["image_id_x"]
         file_name = "/COCO_train2014_" + str(image_id).zfill(12) + ".jpg"
         return Image.open(self.image_path + file_name)
-    
+
     def __get_sentence__(self, sample):
         return sample["sentences"]["sent"]
-    
+
     def __get_bbox__(self, sample):
         return sample["bbox"]
-    
+
     def __get_token_mask__(self, sample):
         segmentation = sample["segmentation"]
         image = self.__get_image__(sample)
@@ -67,7 +67,7 @@ class RefcocogDataset(Dataset):
         token_mask[token_mask > 0.0] = 1 # make the image binary
         token_mask = token_mask.reshape(1, 14, 14)
         return token_mask
-    
+
     def __get_segmentation__(self, sample):
         segmentation = sample["segmentation"]
         image = self.__get_image__(sample)
