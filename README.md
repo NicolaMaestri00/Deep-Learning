@@ -1,4 +1,4 @@
-# *Transfer Learning for Visual Grounding*
+# 🖼️ *Transfer Learning for Visual Grounding*
 
 > 🏫 University of Trento | 🧠 Deep Learning | 📅 A.Y. 2023/2024 | 📗 Final Assignment
 
